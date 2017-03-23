@@ -19,18 +19,18 @@ categories: 搭建博客
 
 # 必要配置
 
-## 2.1 创建GitHub Pages仓库
+## 创建GitHub Pages仓库
 ---
 在自己的GitHub帐号下创建一个新的仓库，命名为username.github.io(username为GitHub的用户名)
-## 2.2 Git
+##  Git
 ---
-### 2.2.1 安装Git
+###  安装Git
 ---
 在Windows下有两种方式:
 1. 安装Git
 2. 安装GitHub
 
-### 2.2.2 配置Git
+###  配置Git
 ---
 设置用户名和邮件地址，Git每次提交都会使用到它们。
 ``` bash
@@ -42,9 +42,9 @@ $ git config --global user.email "username@example.com"
 2. 在z左边的Personal settings侧边栏选择Emails
 3. 在Keep my email address private前打勾
 
-## 2.3 让Git与GitHub建立联系
+##  让Git与GitHub建立联系
 ---
-### 2.3.1 检查电脑上是否存在SSH keys
+###  检查电脑上是否存在SSH keys
 ---
 ``` bash
 $ ls -al ~/.ssh
@@ -52,7 +52,7 @@ $ ls -al ~/.ssh
 ```
 如果存在*.pub和与之同名的无后缀文件，证明已存在SSH keys
 
-### 2.3.2 如果没有SSH key，则生成新的SSH key
+### 如果没有SSH key，则生成新的SSH key
 ---
 ``` bash
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -60,7 +60,7 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 之后一路回车即可。
 
-### 2.3.3 向ssh-agent添加key
+### 向ssh-agent添加key
 ---
 首先确保ssh-agent可运行:
 ``` bash
@@ -89,7 +89,7 @@ $ ssh-agent bash --login -i
 ```
 再执行ssh-add。
 
-### 2.3.4 在GitHub添加SSH key
+###  在GitHub添加SSH key
 ---
 首先，拷贝公钥：
 ``` bash
@@ -115,9 +115,9 @@ Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.
 ```
 
-## 2.4 Hexo
+##  Hexo
 ---
-### 2.4.1 安装Hexo
+###  安装Hexo
 ---
 安装Hexo之前需要安装下列应用程序：
 * [Node.js](http://nodejs.org/)
@@ -126,7 +126,7 @@ provide shell access.
 ``` bash
 $ npm install -g hexo-cli
 ```
-### 2.4.2 使用Hexo建站
+###  使用Hexo建站
 ---
 安装完成后，新建一个文件夹(如D:\Blog)，右键 Blog 选择Git bash here，输入：
 ``` bash
@@ -147,7 +147,7 @@ $ hexo s --debug
 ```
 
 
-### 2.4.3 发布到GitHub Pages
+###  发布到GitHub Pages
 ---
 继续使用上面的文件夹D:\Blog，然后编辑该文件夹下的_config.yml。
 默认生成的_config.yml:
@@ -176,7 +176,7 @@ $ hexo deploy
 ```
 部署后访问username.github.io即可进行浏览。
 
-### 2.4.4 使用主题
+### 使用主题
 ---
 以上使用的是默认主题landscape，可以使用git clone将别人的主题拷贝到D:\Blog\themes下，然后将_config.yml中的theme：landscape改为下载的主题文件夹名称。
 例如使用Next主题hexo-theme-next-5.1.0，配置为：
@@ -192,13 +192,13 @@ theme: hexo-theme-next-5.1.0
 
 # 优化部署与管理
 ---
-## 3.1 概述
+##  概述
 ---
 Hexo部署到GitHub上的文件，是.md(你的博文)在转化之后生成的.html。
 想要在不同的电脑上书写博客，就需要将整个文件夹push到Github上。
 master分支已经用来发布网站了，还需要一个分支hexo存放Hexo网站的文件。
 ---
-## 3.2 我的博客搭建流程
+## 我的博客搭建流程
 ---
 1. 创建GitHub仓库:dinglq1989.github.io
 2. 在GitHub上创建两个分支: master 与 hexo并设置 hexo 为默认分支
@@ -249,9 +249,9 @@ $ git push origin hexo
 $ hexo generate -d
 ```
 
-## 3.3 我的博客管理流程
+##  我的博客管理流程
 ---
-### 3.3.1 日常修改
+###  日常修改
 ---
 1. 提交网站相关文件：
 ``` bash
@@ -263,7 +263,7 @@ $ git push origin hexo
 ``` bash
 $ hexo generate -d
 ```
-### 3.3.2 重新配置书写环境
+###  重新配置书写环境
 ---
 1. 拷贝仓库：
 ``` bash
