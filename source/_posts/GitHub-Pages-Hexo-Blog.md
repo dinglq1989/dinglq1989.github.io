@@ -201,32 +201,48 @@ master分支已经用来发布网站了，还需要一个分支hexo存放Hexo网
 ## 3.2 我的博客搭建流程
 ---
 1. 创建GitHub仓库:dinglq1989.github.io
-2. 创建两个分支: master 与 hexo
-3. 设置 hexo 为默认分支
-4. 拷贝仓库：
+2. 在GitHub上创建两个分支: master 与 hexo并设置 hexo 为默认分支
+3. 拷贝仓库：
 ``` bash
 $ git clone https://github.com/dinglq1989/dinglq1989.github.io.git
 ```
-5. 在本地dinglq1989.github.io文件夹下通过Git bash依次执行：
+4. 在本地dinglq1989.github.io文件夹下通过Git bash依次执行：
 ``` bash
-#此时当前分支应显示为hexo
 $ npm install hexo
 $ hexo init
 $ npm install
+# 下面是部署，首页，归档，分类，标签的插件
 $ npm install hexo-deployer-git 
+$ npm install hexo-generator-index --save
+$ npm install hexo-generator-archive --save
+$ npm install hexo-generator-category --save
+$ npm install hexo-generator-tag --save
 ```
-6. 修改_config.yml中的deploy参数，分支应为master:
+5. 修改_config.yml中的deploy参数，分支应为master:
 ``` yml
 deploy:
   type: git
   repository: https://github.com/dinglq1989/dinglq1989.github.io.git
   branch: master
 ```
+6. 本地Git链接到GitHub
+``` bash
+#初始化本地Git
+$ git init
+#创建本地Git分支hexo并转到hexo分支
+$ git checkout -b hexo
+#添加远程分支origin
+$ git add remote origin https://github.com/dinglq1989/dinglq1989.github.io.git
+#提交本地hexo分支作为远程的hexo分支，左为本地分支
+$ git push origin hexo:hexo
+#
+$ git pull --rebase origin hexo
+```
 7. 依次执行以下指令提交网站相关文件：
 ``` bash
 $ git add .
 $ git commit -m "..."
-$ git push orign hexo
+$ git push origin hexo
 ```
 8. 生成网站并部署到GitHub:
 ``` bash
@@ -241,13 +257,13 @@ $ hexo generate -d
 ``` bash
 $ git add .
 $ git commit -m "..."
-$ git push orign hexo
+$ git push origin hexo
 ```
 2. 生成网站并部署到GitHub:
 ``` bash
 $ hexo generate -d
 ```
-### 3.2.2 重新配置书写环境
+### 3.3.2 重新配置书写环境
 ---
 1. 拷贝仓库：
 ``` bash
