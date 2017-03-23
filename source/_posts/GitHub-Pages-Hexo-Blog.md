@@ -235,7 +235,7 @@ $ git checkout -b hexo
 $ git add remote origin https://github.com/dinglq1989/dinglq1989.github.io.git
 #提交本地hexo分支作为远程的hexo分支，左为本地分支
 $ git push origin hexo:hexo
-#
+# 
 $ git pull --rebase origin hexo
 ```
 7. 依次执行以下指令提交网站相关文件：
@@ -275,4 +275,8 @@ $ git clone https://github.com/dinglq1989/dinglq1989.github.io.git
 $ npm install hexo
 $ npm install
 $ npm install hexo-deployer-git 
+$ npm install hexo-generator-index --save
+$ npm install hexo-generator-archive --save
+$ npm install hexo-generator-category --save
+$ npm install hexo-generator-tag --save
 ```
