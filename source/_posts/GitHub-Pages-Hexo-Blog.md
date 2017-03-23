@@ -203,9 +203,6 @@ master分支已经用来发布网站了，还需要一个分支hexo存放Hexo网
 1. 创建GitHub仓库:dinglq1989.github.io
 2. 创建两个分支: master 与 hexo
 3. 设置 hexo 为默认分支
-``` bash
-$ git init
-$ 
 4. 拷贝仓库：
 ``` bash
 $ git clone https://github.com/dinglq1989/dinglq1989.github.io.git
