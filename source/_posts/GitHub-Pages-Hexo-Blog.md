@@ -39,7 +39,7 @@ $ git config --global user.email "username@example.com"
 ```
 对于user.email，因为在GitHub的commits信息上是可见的，所以如果你不想让人知道你的email，可以Keeping your email address private:
 1. 在GitHub右上方点击你的头像，选择Settings
-2. 在z左边的Personal settings侧边栏选择Emails
+2. 在左边的Personal settings侧边栏选择Emails
 3. 在Keep my email address private前打勾
 
 ##  让Git与GitHub建立联系
@@ -194,10 +194,8 @@ theme: hexo-theme-next-5.1.0
 ---
 ##  概述
 ---
-Hexo部署到GitHub上的文件，是.md(你的博文)在转化之后生成的.html。
-想要在不同的电脑上书写博客，就需要将整个文件夹push到Github上。
+Hexo部署到GitHub上的文件，是.md(你的博文)在转化之后生成的.html。想要在不同的电脑上书写博客，就需要将整个文件夹push到Github上。
 master分支已经用来发布网站了，还需要一个分支hexo存放Hexo网站的文件。
----
 ## 我的博客搭建流程
 ---
 1. 创建GitHub仓库:dinglq1989.github.io
