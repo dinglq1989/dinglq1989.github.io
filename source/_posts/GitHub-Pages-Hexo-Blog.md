@@ -275,8 +275,4 @@ $ git clone https://github.com/dinglq1989/dinglq1989.github.io.git
 $ npm install hexo
 $ npm install
 $ npm install hexo-deployer-git 
-$ npm install hexo-generator-index --save
-$ npm install hexo-generator-archive --save
-$ npm install hexo-generator-category --save
-$ npm install hexo-generator-tag --save
 ```
